@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Portfolio - View Any Address</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🟦 Base Portfolio</h1>
+            <p class="subtitle">View any address balance instantly</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <input type="text" id="addressInput" placeholder="Enter Base address (0x...)" />
+                <button id="lookupBtn" class="search-btn">Lookup</button>
+            </div>
+
+            <div id="addressInfo" class="address-card hidden">
+                <div class="address-header">
+                    <span class="badge" id="addressType">EOA</span>
+                    <span class="address" id="displayAddress">0x...</span>
+                </div>
+                
+                <div class="balance-section">
+                    <div class="main-balance">
+                        <span class="label">Total Value</span>
+                        <span class="value" id="totalValue">$0.00</span>
+                    </div>
+                </div>
+                
+                <div class="tokens-section">
+                    <h3>Tokens</h3>
+                    <div id="tokenList" class="token-list">
+                        <!-- Token rows will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching data...</p>
+            </div>
+
+            <div id="error" class="error-box hidden"></div>
+            
+            <div class="info-box">
+                <h3>What is this?</h3>
+                <p>Enter any Base address to see their ETH and token balances. Great for:</p>
+                <ul>
+                    <li>Checking your own portfolio</li>
+                    <li>Verifying payments received</li>
+                    <li>Checking token holdings of any address</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built by <a href="https://x.com" target="_blank">@Roger_Agent</a> 🟦</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
